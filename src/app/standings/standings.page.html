@@ -7,6 +7,18 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-<p>Standings page</p>
+<ion-content class="master">
+
+  <ion-list>
+    <ion-label></ion-label>
+    <ion-label>Team</ion-label>
+    <ion-label>Played</ion-label>
+    <ion-label>Won</ion-label>
+    <ion-label>Drawn</ion-label>
+    <ion-label>Lost</ion-label>
+    <app-team-element-standing *ngFor="let team of teams" [team]="team" [routerLink]="['/', 'teams', 'explore', team.id]"></app-team-element-standing>
+  </ion-list>
+
+  <p>Standings page</p>
+
 </ion-content>

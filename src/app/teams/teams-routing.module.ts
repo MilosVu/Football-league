@@ -6,7 +6,23 @@ import { TeamsPage } from './teams.page';
 const routes: Routes = [
   {
     path: '',
-    component: TeamsPage
+    component: TeamsPage,
+    children: [
+      {
+        path: 'explore',
+        loadChildren: () => import('./explore/explore.module').then( m => m.ExplorePageModule)
+      },
+      {
+        path: '',
+        redirectTo: 'explore',
+        pathMatch: 'full'
+      }
+    ]
+  },
+  {
+    path: '',
+    redirectTo: 'explore',
+    pathMatch: 'full'
   }
 ];
 

@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { StandingsPageRoutingModule } from './standings-routing.module';
 
 import { StandingsPage } from './standings.page';
-import {ExplorePageModule} from "../teams/explore/explore.module";
+import {ExplorePageModule} from '../teams/explore/explore.module';
 import {
   TeamElementStandingComponent
 } from './team-element-standing/team-element-standing.component';

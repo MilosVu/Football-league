@@ -8,6 +8,7 @@ import { ExplorePageRoutingModule } from './explore-routing.module';
 
 import { ExplorePage } from './explore.page';
 import {TeamElementComponent} from '../team-element/team-element.component';
+import {TeamModalComponent} from '../team-modal/team-modal.component';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import {TeamElementComponent} from '../team-element/team-element.component';
   exports: [
     TeamElementComponent
   ],
-  declarations: [ExplorePage, TeamElementComponent]
+  declarations: [ExplorePage, TeamElementComponent, TeamModalComponent],
+  entryComponents: [TeamModalComponent]
 })
 export class ExplorePageModule {}

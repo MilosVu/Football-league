@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ResultsPageRoutingModule } from './results-routing.module';
 
 import { ResultsPage } from './results.page';
+import {ResultsElementComponent} from './results-element/results-element.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { ResultsPage } from './results.page';
     IonicModule,
     ResultsPageRoutingModule
   ],
-  declarations: [ResultsPage]
+  declarations: [ResultsPage, ResultsElementComponent]
 })
 export class ResultsPageModule {}

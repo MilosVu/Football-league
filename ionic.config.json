@@ -1,5 +1,7 @@
 {
   "name": "Fudbalska liga app",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

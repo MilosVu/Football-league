@@ -1,24 +1,36 @@
+<style>
+  .standings-data{
+    text-align: center;
+  }
+</style>
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>standings</ion-title>
+    <ion-title>Standings</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="master">
 
   <ion-list>
-    <ion-label></ion-label>
-    <ion-label>Team</ion-label>
-    <ion-label>Played</ion-label>
-    <ion-label>Won</ion-label>
-    <ion-label>Drawn</ion-label>
-    <ion-label>Lost</ion-label>
-    <app-team-element-standing *ngFor="let team of teams" [team]="team" [routerLink]="['/', 'teams', 'explore', team.id]"></app-team-element-standing>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="2"><ion-label class="ion-text-center">#</ion-label></ion-col>
+        <ion-col size="2"><ion-label>Club</ion-label></ion-col>
+        <ion-col class="standings-data"><ion-label>Pl</ion-label></ion-col>
+        <ion-col class="standings-data"><ion-label>W</ion-label></ion-col>
+        <ion-col class="standings-data"><ion-label>D</ion-label></ion-col>
+        <ion-col class="standings-data"><ion-label>Lost</ion-label></ion-col>
+        <ion-col class="standings-data"><ion-label><b>Pts</b></ion-label></ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <app-team-element-standing *ngFor="let team of teamsPreview" [teamsPreview]="team"></app-team-element-standing>
   </ion-list>
 
-  <p>Standings page</p>
+
 
 </ion-content>
+

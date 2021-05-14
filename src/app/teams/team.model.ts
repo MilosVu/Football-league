@@ -1,10 +1,10 @@
 export interface Team{
-  id: number;
+  id: string;
   name: string;
   played: number;
   points: number;
-  won: number;
-  lost: number;
-  drawn: number;
+  wins: number;
+  losses: number;
+  draws: number;
   imageUrl: string;
 }

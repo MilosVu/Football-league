@@ -6,7 +6,11 @@ import { FixturesPage } from './fixtures.page';
 const routes: Routes = [
   {
     path: '',
-    component: FixturesPage
+    component: FixturesPage,
+  },
+  {
+    path: ':fixtureId',
+    loadChildren: () => import('./fixtures-details/fixtures-details.module').then( m => m.FixturesDetailsPageModule)
   }
 ];
 
